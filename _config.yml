@@ -1,0 +1,9 @@
+title: MCMC Reporting Best Practices
+email: pwilliams@cfa.harvard.edu
+description: >
+  Recommendations for how to report MCMC analyses in academic literature.
+baseurl: "/mcmc-reporting"
+url: "http://pkgw.github.io"
+twitter_username: pkgw
+github_username: pkgw
+markdown: kramdown
