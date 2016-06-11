@@ -201,6 +201,7 @@ contents (but their endorsement of some or all of its arguments should not be as
 
 - Fabienne Bastien
 - Trent Dupuy
+- Phil Muirhead
 
 
 Colophon
