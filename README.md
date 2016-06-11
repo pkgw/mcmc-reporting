@@ -34,3 +34,9 @@ on pull requests?
 ```
 jekyll serve -w
 ```
+
+If you submit a change to the document text or other aspects of the source
+code, please remember to add yourself to the list of contributors in the
+[index.md](index.md)! You don’t have to agree with every recommendation, and
+we try to make it clear that being listed on the contributors list does not
+imply that one necessarily does.
