@@ -137,10 +137,71 @@ wish to perform studies based on the detailed characteristics of your
 posterior, the best way to enable this is to provide a machine-readable table
 of all of your samples, including parameter values, the computed likelihood,
 and prior probabilities. We normally consider this an “extra credit” level of
-detail.
+detail, but it bears emphasizing that these samples are the fundamental data
+product of an MCMC analysis.
+
+All further reporting is fundamentally a question of **fairly representing the
+probability distribution implied by your samples**. No hard and fast rules
+will apply across all possible results, and in some cases there will be no
+simple numerical summary that fairly conveys the shape of the resulting
+probability distribution.
+
+However, in many cases a popular representation is a “triangle” or “corner”
+plot of two-dimensional marginalizations of your parameters. (**TODO**:
+example). It is fair to ignore nuisance parameters if their correlations with
+the parameters of interest are not significant, especially since corner plots
+become difficult to parse as the number of parameters plotted exceeds four or
+five.
+
+In most cases, the reader will be interested in summary statistics describing
+the marginalized posterior probability distribution inferred for each
+non-nuisance parameter. We recommend reporting the **median value** and a
+**68% credible region** when such a distribution is unimodal, approximately
+Gaussian in shape, and not highly correlated with another parameter. There are
+multiple ways to determine credible intervals, and a large literature
+describing their strengths and weaknesses. (**TODO**: examples.) Subsequent
+analysis should not be sensitive to the precise bounds of the reported
+credible interval, so the particular method used should not be particularly
+important.
+
+Readers will assume that distributions are Gaussian in shape unless you
+indicate otherwise. Therefore it is often particularly important to
+investigate whether your posterior distributions are *leptokurtic*
+(fat-tailed) compared to a Gaussian distribution, i.e. whether they contain
+more 3σ outliers than would be expected in a Gaussian approximation.
+
+If the posterior for a parameter is not unimodally distributed, or it is
+highly correlated with one ore more other parameters, summarizations of its
+posterior should highlight these properties **and typical “X ± Y” summaries
+should be avoided** since casual readers will assume that parameters are
+approximately Gaussian-distributed and not correlated with one another. If a
+set of parameters are correlated but have unimodal, approximately normal
+distributions, an appropriate summary might be a covariance matrix.
+
+Finally, **the shrinkage of the posterior distribution relative to the prior
+distributions** should be investigated. In some cases, it will be obvious that
+the posterior distributions are significantly narrower than the priors and
+quantitative analysis of this matter is overkill. If it is not obvious, the
+appropriate course of action will depend on the situation. **If the shape of a
+posterior distribution is largely set by the shape of the prior, this should
+be stated clearly.** Note that this is not necessarily a bad thing, if the
+prior distribution’s shape is non-arbitrary. **TODO**: I think there’s some
+way Single Best Way to quantify the shrinkage, using a K-L divergence or
+something?
 
 
+Contributors
+============
 
+The following individuals (listed in alphabetical order) contributed text to this document:
+
+- Peter K. G. Williams
+
+The following individuals (listed in alphabetical order) have discussed its
+contents (but their endorsement of some or all of its arguments should not be assumed!):
+
+- Fabienne Bastien
+- Trent Dupuy
 
 
 Colophon
@@ -152,8 +213,14 @@ And so on. Here’s the
 information about how to contribute to this document.
 
 
-Ideas
-=====
+Ideas for Improving this Document
+=================================
 
 - A bibliography with recommended citations for relevant algorithms,
   implementations, convergence criteria, visualization methods, etc.
+
+- Write this document with Bibtex somehow so we can use citations more
+  liberally and easily.
+
+- Recommendations of software packages or code snippets that can implement
+  these best practices in various software environments.
