@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Recommendations for Reporting the Results of MCMC Analyses in Scientific Literature
 ---
 
 Introduction
@@ -209,18 +208,25 @@ Colophon
 
 **To fill in**: Contributors. License of the document. Version information.
 And so on. Here’s the
-[README on Github](https://github.com/pkgw/mcmc-reporting#readme) with
+[README on GitHub](https://github.com/pkgw/mcmc-reporting#readme) with
 information about how to contribute to this document.
 
 
 Ideas for Improving this Document
 =================================
 
+These should also be collected on the
+[GitHub issue page](https://github.com/pkgw/mcmc-reporting/issues) for this
+document.
+
 - A bibliography with recommended citations for relevant algorithms,
   implementations, convergence criteria, visualization methods, etc.
 
 - Write this document with Bibtex somehow so we can use citations more
   liberally and easily.
+
+- Sprinkle in (more) references to inspiring, positive examples from the
+  literature.
 
 - Recommendations of software packages or code snippets that can implement
   these best practices in various software environments.
