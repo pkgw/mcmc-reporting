@@ -7,3 +7,10 @@ what was done and reproduce it if needed.
 
 The nicely-formatted document itself lives at
 <http://pkgw.github.io/mcmc-reporting/>.
+
+**To be done**: writing up of how modify the document, view changes on your
+local machine, and submit them on a pull request.
+
+```
+jekyll serve -w
+```
