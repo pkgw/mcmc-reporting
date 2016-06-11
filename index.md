@@ -203,14 +203,14 @@ contents (but their endorsement of some or all of its arguments should not be as
 - Trent Dupuy
 - Phil Muirhead
 
+**[Visit this document’s GitHub page to learn how you can contribute too!](https://github.com/pkgw/mcmc-reporting#readme)**.
+Suggestions from both beginners and experts are welcome.
+
 
 Colophon
 ========
 
-**To fill in**: Contributors. License of the document. Version information.
-And so on. Here’s the
-[README on GitHub](https://github.com/pkgw/mcmc-reporting#readme) with
-information about how to contribute to this document.
+**To fill in**: License of the document. Version information. And so on.
 
 
 Ideas for Improving this Document
