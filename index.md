@@ -94,9 +94,66 @@ Specification of the **number of chains run**, **number of steps per chain**,
 gathering samples of the posterior.
 
 
+Describing Your Results
+=======================
+
+Your MCMC analysis results in some number of samples drawn from a posterior
+distribution. When describing the results, the overarching goals are to
+demonstrate that the samples capture the true shape of the posterior, and to
+provide a fair characterization of the posterior’s shape as inferred from the
+samples.
+
+We recommend that, at a minimum, reported MCMC results include the following
+pieces of information regarding the properties of the chains:
+
+A summary of the **autocorrelation lengths** of the MCMC chains for each
+parameter, and a derived **number of independent samples of the key
+parameters** (computed simply as the total number of samples divided by the
+autocorrelation length). If there are many parameters, some summary numbers
+(e.g., the longest and shortest autocorrelation lengths out of all of the
+parameters, and the corresponding smallest and largest numbers of independent
+samples) are fine. **TODO**: a good reference addressing the question of “how
+many independent samples are enough?”.
+
+Likewise, the jump **acceptance fractions** computed for each chain, or a
+summary of them if there are many chains and/or parameters. Acceptance
+fractions outside the range of 10–90% suggest that the sampler is not
+well-matched to your problem and are cause for concern, since your samples may
+not be fully exploring the posterior distribution.
+
+A quantitative **convergence criterion** indicating that your chains have
+likely converged to fully and adequately sample the posterior distribution.
+The [Gelman-Rubin criterion](http://dx.doi.org/10.1080/10618600.1998.10474787)
+is popular, but it is important to note that it is not valid to apply it
+naively when using the [emcee](http://dan.iel.fm/emcee/current/) sampler,
+since Gelman-Rubin examines correlations between chains and
+[emcee](http://dan.iel.fm/emcee/current/) imposes correlations on its chains.
+**TODO**: check out Geweke (1992) criterion cited in Montet’s paper.
+
+In most cases, more emphasis is placed on the shape of the *n*-dimensional
+probability distribution inferred from the MCMC posterior samples, rather than
+the samples themselves. However, if you think that readers of your work may
+wish to perform studies based on the detailed characteristics of your
+posterior, the best way to enable this is to provide a machine-readable table
+of all of your samples, including parameter values, the computed likelihood,
+and prior probabilities. We normally consider this an “extra credit” level of
+detail.
+
+
+
+
+
 Colophon
 ========
 
-Contributors. License of the document. Version information. And so on. Here’s
-the [README on Github](https://github.com/pkgw/mcmc-reporting#readme) with
+**To fill in**: Contributors. License of the document. Version information.
+And so on. Here’s the
+[README on Github](https://github.com/pkgw/mcmc-reporting#readme) with
 information about how to contribute to this document.
+
+
+Ideas
+=====
+
+- A bibliography with recommended citations for relevant algorithms,
+  implementations, convergence criteria, visualization methods, etc.
