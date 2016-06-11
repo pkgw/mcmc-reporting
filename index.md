@@ -203,7 +203,10 @@ contents (but their endorsement of some or all of its arguments should not be as
 - Trent Dupuy
 - Phil Muirhead
 
-**[Visit this document’s GitHub page to learn how you can contribute too!](https://github.com/pkgw/mcmc-reporting#readme)**.
+Changes to this document are managed using the
+[Git version control system](https://git-scm.com/) through the website
+[GitHub](https://github.com/).
+**[Visit the GitHub page to learn how you can become a contributor too!](https://github.com/pkgw/mcmc-reporting#readme)**.
 Suggestions from both beginners and experts are welcome.
 
 
